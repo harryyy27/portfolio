@@ -81,7 +81,8 @@ const Canvas = styled.canvas`
 `
 const Heading = styled.h1`
     width:100%;
-    
+    text-align:center;
+
     font-size: 26px;
     color: ${props=>props.color};
     @media(min-width: 615px){
@@ -89,7 +90,6 @@ const Heading = styled.h1`
         font-size: ${props=>props.size!==undefined?props.size+'px':'2em'};
         top: ${props=>props.y}vh;
         left: ${props=>props.x}vw;
-        text-align:center;
         padding:10px 0px 10px 0px
     }
 
