@@ -1,13 +1,17 @@
 import styled from 'styled-components'
 
 const Wrapper = styled.main`
-    position: relative;
-    top: -50%;
+    position: absolute
+    top: 20vh;
+    @media(max-width: 614px){
+        top: 115px;
+    }
     width:100vw;
     @media(min-width:615px){
         width: 70vw;
 
     }
+
     background: ${props=>localStorage.getItem("page")==='Home'||localStorage.getItem("page")===null?'white':props.color};
     margin: auto;
 `
@@ -84,21 +88,23 @@ const Heading = styled.h1`
     text-align:center;
 
     font-size: 26px;
-    color: ${props=>props.color};
-    @media(min-width: 615px){
+    
+    @media(min-width: 0px){
+        color: ${props=>props.color};
         position: ${props=>localStorage.getItem("page")!=='Home'?'relative':'absolute'};
         font-size: ${props=>props.size!==undefined?props.size+'px':'2em'};
         top: ${props=>props.y}vh;
         left: ${props=>props.x}vw;
         padding:10px 0px 10px 0px
     }
+    
 
 `
 const HeaderElement = styled.header`
     width: 100vw;
     padding:0px;
     margin: 0px
-
+    position: fixed;
 `
 const Paragraph = styled.p`
     font-family: Helvetica;
@@ -107,15 +113,17 @@ const Paragraph = styled.p`
     width: 80%;
 `
 const SubHeading = styled.h2`
-    
-    @media(min-width:615px){
+   
         position: ${props=>props.position};
         top: ${props=>props.y}vh;
         left: ${props=>props.x}vw;
         font-size: ${props=>props.size}px;
         color: ${props=>props.color};
-    }
     
+    @media(max-width:614){
+        font-size: ${props=>props.size/2}px;
+
+    }
 `
 const Frame = styled.iframe`
 
