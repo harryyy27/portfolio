@@ -85,13 +85,13 @@ export default function App() {
             Deeplearning !==undefined&&Deeplearning !== null?
             <Deeplearning />: null}/>
 
-          <Route path='/canvas' exact strict render={()=>
+          {/* <Route path='/canvas' exact strict render={()=>
             Canvas !== undefined && Canvas!==null?
             <Canvas />:null}/>
 
           <Route path='/contact' exact strict render={()=>
             Contact !== undefined && Contact!==null?
-            <Contact />:null}/>
+            <Contact />:null}/> */}
 
         </Router>
     );

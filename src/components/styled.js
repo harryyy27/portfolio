@@ -5,7 +5,7 @@ const Wrapper = styled.main`
     
     
     @media(max-width: 614px){
-        top: 115px;
+        top: 100px;
         width:100vw;
     }
     
@@ -43,7 +43,7 @@ const Nav = styled.nav`
     background: black;
     height: 20vh;
     @media(max-width: 614px){
-        height: 90px;
+        height: 100px;
 
     }
     position: relative;
@@ -71,9 +71,6 @@ const ListElement = styled.li`
 @media(max-width: 614px){
     width: 100vw;
     text-align: center;
-    &:hover {
-        background:#00FF7F
-    }
 }
     list-style-type: none;
     font-family: Helvetica;

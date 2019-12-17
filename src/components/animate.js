@@ -1,6 +1,5 @@
 import React, {useState,useEffect} from 'react'
 import {Wrapper,Heading,Canvas,Me} from './styled'
-import harry from'./harry.jpg'
 
 const Animate = ()=>{
     const [width,setWidth]=useState(window.innerWidth);
@@ -8,14 +7,7 @@ const Animate = ()=>{
     useEffect(()=>{
         const canvas = document.getElementById('canvas').getContext('2d');
         console.log(canvas)
-        
-        var img = new Image()
-        img.src = `./harry.jpg`
-        console.log(img)
-        img.onload=()=>{
-            canvas.drawImage(img,0,0,255,255)
-
-        }
+     
         document.addEventListener('resize',()=>{
             setWidth(window.innerWidth);
             setHeight(window.innerHeight);
