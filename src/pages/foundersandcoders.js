@@ -14,7 +14,7 @@ const Foundersandcoders=()=>{
             <Paragraph>
                 Below you can find some of the projects to which I contributed:
             </Paragraph>
-            <ComponentWrapper>
+            <ComponentWrapper flex={'flex'}>
             <Figure>
             <Frame src="https://secret-refuge-10251.herokuapp.com/" frameBorder="0"/>
 

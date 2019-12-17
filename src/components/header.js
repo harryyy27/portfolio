@@ -39,12 +39,12 @@ const Header =(props)=>{
                             }}to='/deeplearning' activeStyle={{color:'red'}}
                             style={{color: 'white', textDecoration: 'none'}}>Deep Learning</NavLink>
                         </ListElement>
-                        <ListElement>
+                        {/* <ListElement>
                             <NavLink onClick={(e)=>{
                                 props.handleImport('canvas')
                             }}to='/canvas' activeStyle={{color:'red'}}
                             style={{color: 'white', textDecoration: 'none'}}>Also</NavLink>
-                        </ListElement>
+                        </ListElement> */}
                         {/* <ListElement>
                             <NavLink onClick={(e)=>{
                                 props.handleImport('contact')

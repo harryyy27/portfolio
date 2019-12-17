@@ -1,15 +1,18 @@
 import styled from 'styled-components'
 
 const Wrapper = styled.main`
-    position: absolute
-    top: 20vh;
+    position: relative
+    
+    
     @media(max-width: 614px){
         top: 115px;
+        width:100vw;
     }
-    width:100vw;
+    
     @media(min-width:615px){
+        top: 20vh;
         width: 70vw;
-
+        margin: auto;
     }
 
     background: ${props=>localStorage.getItem("page")==='Home'||localStorage.getItem("page")===null?'white':props.color};
@@ -29,7 +32,7 @@ const Anchor = styled.a`
 const ComponentWrapper = styled.div`
     margin: auto;
     display: flex;
-    @media(max-width:614px){
+    @media(max-width:${props=>props.flex==='flex'?'875px':'614px'}){
         flex-direction:column;
         align-items: center;
     }
@@ -40,7 +43,8 @@ const Nav = styled.nav`
     background: black;
     height: 20vh;
     @media(max-width: 614px){
-        height: 115px;
+        height: 90px;
+
     }
     position: relative;
 `
@@ -65,36 +69,35 @@ const NavList = styled.ul`
 `
 const ListElement = styled.li`
 @media(max-width: 614px){
-
-    border: 1px solid white;
     width: 100vw;
     text-align: center;
+    &:hover {
+        background:#00FF7F
+    }
 }
     list-style-type: none;
     font-family: Helvetica;
     padding: 0px 12px;
     font-size: 16px;
     color: white;
-@:click {
-    border: 2px solid white;
-}
-    
 `
 const Canvas = styled.canvas`
 
 `
 const Heading = styled.h1`
-    width:100%;
-    text-align:center;
-
-    font-size: 26px;
+    width:50vw;
+    margin: auto;
+    
+  
+   
     
     @media(min-width: 0px){
-        color: ${props=>props.color};
-        position: ${props=>localStorage.getItem("page")!=='Home'?'relative':'absolute'};
-        font-size: ${props=>props.size!==undefined?props.size+'px':'2em'};
-        top: ${props=>props.y}vh;
-        left: ${props=>props.x}vw;
+        color: ${props=>props.color?props.color:'black'};
+        position: ${props=>localStorage.getItem("page")!=='Home'?'static':'absolute'};
+        font-size: ${props=>props.size?props.size+'px':'2em'};
+        top: ${props=>props.y?props.y+'vh':null};
+        left: ${props=>props.x?props.x+'vw': null};
+        text-align:center;
         padding:10px 0px 10px 0px
     }
     
@@ -104,13 +107,16 @@ const HeaderElement = styled.header`
     width: 100vw;
     padding:0px;
     margin: 0px
+    z-index: 100;
     position: fixed;
+    top: 0px
 `
 const Paragraph = styled.p`
     font-family: Helvetica;
     font-size: ${props=>props.size!==null}
     margin: auto;
     width: 80%;
+    padding: 0px 0px 10px 0px;
 `
 const SubHeading = styled.h2`
    
@@ -148,4 +154,13 @@ const Figure = styled.figure`
 const Container = styled.main`
     width: 100%;
 `
-export {Wrapper,Heading, Nav, NavList, ListElement,HeaderElement,SubHeading,Paragraph,Canvas,Frame,ComponentWrapper,Anchor,Image,Figure,Caption,Container }
+const Me = styled.img`
+    border-radius: 50%;
+    @media(max-width: 614px){
+        width: ${props=>props.size};
+        height: ${props=>props.size};
+        
+    }
+     
+`
+export {Me,Wrapper,Heading, Nav, NavList, ListElement,HeaderElement,SubHeading,Paragraph,Canvas,Frame,ComponentWrapper,Anchor,Image,Figure,Caption,Container }

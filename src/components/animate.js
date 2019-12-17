@@ -1,14 +1,31 @@
-import React from 'react'
-import {Wrapper,Heading,Canvas} from './styled'
-
+import React, {useState,useEffect} from 'react'
+import {Wrapper,Heading,Canvas,Me} from './styled'
+import harry from'./harry.jpg'
 
 const Animate = ()=>{
-    var canvas = document.getElementById('canvas');
-    console.log(canvas)
+    const [width,setWidth]=useState(window.innerWidth);
+    const [height,setHeight]=useState(window.innerHeight);
+    useEffect(()=>{
+        const canvas = document.getElementById('canvas').getContext('2d');
+        console.log(canvas)
+        
+        var img = new Image()
+        img.src = `./harry.jpg`
+        console.log(img)
+        img.onload=()=>{
+            canvas.drawImage(img,0,0,255,255)
+
+        }
+        document.addEventListener('resize',()=>{
+            setWidth(window.innerWidth);
+            setHeight(window.innerHeight);
+        })
+    })
+    
     return(
-        <Wrapper>
-            <Canvas id="canvas"></Canvas>
-        </Wrapper>
+        <>
+            <Canvas id="canvas" width={`${width}`} height={`${height}`}></Canvas>
+        </>
     )
 }
 // 
