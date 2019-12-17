@@ -19,13 +19,13 @@ const Foundersandcoders=()=>{
             <Frame src="https://secret-refuge-10251.herokuapp.com/" frameBorder="0"/>
 
             <Caption><Anchor href="https://secret-refuge-10251.herokuapp.com/">
-                    Brickworks
+                    <strong>Brickworks</strong>
                 </Anchor></Caption>
                 </Figure>
                 <Figure>
                 <Frame src="https://vent-bot.herokuapp.com" frameBorder="0"/>
                 <Anchor href="https://vent-bot.herokuapp.com">
-                    Ventbot
+                    <strong>Ventbot</strong>
                 </Anchor>
                 </Figure>
             </ComponentWrapper>
@@ -36,7 +36,7 @@ const Foundersandcoders=()=>{
             </ComponentWrapper>
             <br/>
                 <Paragraph>
-                    More projects can be found on my <Anchor href="https://github.com/harryyy27">Github</Anchor>
+                    More projects can be found on my <Anchor href="https://github.com/harryyy27"><strong>Github</strong></Anchor>
                 </Paragraph>
             
             
