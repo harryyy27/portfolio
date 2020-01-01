@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import {Wrapper, Paragraph,Heading} from '../components/styled'
-const Me=()=>{
+const Me=(props)=>{
     // const [size,setSize]=useState('16')
     // useEffect(()=>{
     //     return ()=>{
@@ -8,7 +8,7 @@ const Me=()=>{
     //     }
     // },[])
     return(
-        <Wrapper>
+        <Wrapper open={props.burgerOpen}>
             <Heading>Me</Heading>
             <Paragraph >
                 Hi, my name's Harry. I'm currently a full stack developer working at Russell and Bromley and have recently developed a hobby in machine learning. 

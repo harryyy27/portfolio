@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import {SubHeading, Heading,Wrapper,Anchor} from '../components/styled'
 
-const Contact = () =>{
+const Contact = (props) =>{
     const [position,setPosition] = useState('absolute')
         useEffect(()=>{
                 // setPosition("absolute");
@@ -10,7 +10,7 @@ const Contact = () =>{
                 }
         },[])
     return (
-        <Wrapper>
+        <Wrapper open={props.burgerOpen}>
             <Heading></Heading>
             <SubHeading
                         position={position} 

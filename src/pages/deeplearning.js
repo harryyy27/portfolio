@@ -4,10 +4,9 @@ import nader from './img/nader.jpg'
 import starry_day from './img/starry_day1.png'
 import starry_night from './img/starry_night.jpeg'
 import jacob from './img/jacobs.png'
-class DeepLearning extends React.Component {
-    render(){
+const DeepLearning =(props)=>{
         return(
-            <Wrapper>
+            <Wrapper open={props.burgerOpen}>
                 <Heading>Keras</Heading>
                 <SubHeading>Where am I now?</SubHeading>
                 <Paragraph>I have also completed a number of projects with <strong style={{color:"red"}}>Keras</strong>, mainly from the book Deep Learning with <strong style={{color:"red"}}>Python</strong>. It's given me a broad high level overview of deep learning. I now feel like I know what's possible and where to begin projects that require either <strong style={{color:"red"}}>machine learning</strong> or <strong style={{color:"red"}}>deep learning</strong>. It also gave me a very useful overview of some of the techniques available for <strong style={{color:"red"}}>optimizing</strong> neural networks such as <strong style={{color:"red"}}>ensembling</strong> and a number of methods for preventing <strong style={{color:"red"}}>overfitting</strong>.</Paragraph>
@@ -48,7 +47,7 @@ class DeepLearning extends React.Component {
                 </Paragraph>
             </Wrapper>
         )
-    }
+    
 }
 
 export default DeepLearning;

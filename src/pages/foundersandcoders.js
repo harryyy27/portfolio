@@ -1,9 +1,9 @@
 import React from 'react';
 import {Wrapper,Heading,Paragraph,Frame,ComponentWrapper,Anchor,Figure,Caption} from '../components/styled'
 
-const Foundersandcoders=()=>{
+const Foundersandcoders=(props)=>{
     return(
-        <Wrapper>
+        <Wrapper open={props.burgerOpen}>
             <Heading>
                 Founders & Coders
             </Heading>

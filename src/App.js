@@ -21,6 +21,10 @@ export default function App() {
     return [loc,setLoc]
   }
   const [page, handleComponent]=useLocalState()
+  const [burgerOpen, burgerChange] = useState(false)
+  const burgerHandle=()=>{
+      burgerChange(!burgerOpen)
+  }
   useEffect(()=>{
     window.addEventListener("load",()=>{
       let page = localStorage.getItem('page')
@@ -66,24 +70,24 @@ export default function App() {
     }
     return (
         <Router>
-          <Header handleImport={handleImport}page={page}/>
-          <Route path='/' exact strict render={()=><Home />}/>
+          <Header handleImport={handleImport}page={page} burgerOpen={burgerOpen} burgerHandle={burgerHandle}/>
+          <Route path='/' exact strict render={()=><Home burgerOpen={burgerOpen}/>}/>
 
           <Route path='/me' exact strict render={()=>
             Me !==undefined&&Me !== null?
-            <Me />: null}/>
+            <Me burgerOpen={burgerOpen}/>: null}/>
             
           <Route path='/foundersandcoders' exact strict render={()=>
             Foundersandcoders !==undefined&&Foundersandcoders!==null?
-            <Foundersandcoders />:null}/>
+            <Foundersandcoders burgerOpen={burgerOpen}/>:null}/>
 
           <Route path='/russellandbromley' exact strict render={()=>
             Russellandbromley !==undefined&& Russellandbromley !==null?
-            <Russellandbromley/>:null}/>
+            <Russellandbromley burgerOpen={burgerOpen}/>:null}/>
 
           <Route path='/deeplearning' exact strict render={()=>
             Deeplearning !==undefined&&Deeplearning !== null?
-            <Deeplearning />: null}/>
+            <Deeplearning burgerOpen={burgerOpen}/>: null}/>
 
           {/* <Route path='/canvas' exact strict render={()=>
             Canvas !== undefined && Canvas!==null?

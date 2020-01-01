@@ -1,16 +1,12 @@
 import React,{useState, useEffect} from 'react'
 import {Wrapper, Heading, SubHeading} from '../components/styled'
 
-const Home =()=> {
+const Home =(props)=> {
         const sizeArr = [Math.ceil(50+Math.random()*20),Math.ceil(30+Math.random()*20),Math.ceil(20+Math.random()*10),Math.ceil(30+Math.random()*10),Math.ceil(25+Math.random()*10)]
         
         const [position,setPosition] = useState('absolute')
-        if(window.innerWidth<700){
-            var [size,handleSize]= useState(sizeArr.map(el=>el/2))
-        }
-        else {
-            var [size,handleSize]=useState(sizeArr)
-        }
+        const [size,handleSize]= useState(window.innerWidth<700?sizeArr.map(el=>el/2):sizeArr)
+       
         useEffect(()=>{
                 // setPosition("absolute");
                 return ()=>{
@@ -41,7 +37,7 @@ const Home =()=> {
             }
         })
         return(
-            <Wrapper>
+            <Wrapper open={props.burgerOpen}>
                     <Heading 
                         x={30*Math.random()} 
                         y={0} 

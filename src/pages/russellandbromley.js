@@ -1,8 +1,8 @@
 import React from 'react';
 import {Wrapper, Heading, Paragraph,SubHeading} from '../components/styled'
-function Russellandbromley(){
+function Russellandbromley(props){
     return(
-        <Wrapper>
+        <Wrapper open={props.burgerOpen}>
             <Heading>Russell and Bromley</Heading>
                 <Paragraph>
                     My work with <strong style={{color:"red"}}>Russell and Bromley</strong> has mainly been an ongoing collaboration with Oracle involving development of my <strong style={{color:"red"}}>eCommerce</strong> knowledge whilst simultaneously learning how to use the <strong style={{color:"red"}}>Oracle Commerce Cloud</strong> along with <strong style={{color:"red"}}>Knockout.js</strong>, all of which I've successfully managed to achieve. A lot of my work was debugging the website and regression testing to ensure every change had no side effects elsewhere (which was surprisingly common). This gave me a lot of ideas for side projects.

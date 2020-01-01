@@ -5,7 +5,7 @@ const Wrapper = styled.main`
     
     
     @media(max-width: 614px){
-        top: 100px;
+        transform: ${({ open }) => open ? 'translateY(100px)' : 'translateY(40px)'};
         width:100vw;
     }
     
@@ -40,13 +40,63 @@ const ComponentWrapper = styled.div`
     width: 100%;
 `
 const Nav = styled.nav`
+    position: relative;
+    top:0px;
     background: black;
     height: 20vh;
     @media(max-width: 614px){
+        position: fixed;
+        transform: ${({ open }) => open ? 'translateY(0)' : 'translateY(-100%)'};
         height: 100px;
-
+        position: absolute;
+        width:100vw;
     }
+    
+`
+const BurgerButton= styled.button`
+  @media(min-width: 615px){
+      display: none;
+  }
+  position: absolute;
+  top: 5%;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+
+  &:focus {
+    outline: none;
+  }
+
+  div {
+    width: 2rem;
+    height: 0.25rem;
+    background: white;
+    border-radius: 10px;
+    transition: all 0.3s linear;
     position: relative;
+    transform-origin: 1px;
+
+    :first-child {
+      transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
+    }
+
+    :nth-child(2) {
+      opacity: ${({ open }) => open ? '0' : '1'};
+      transform: ${({ open }) => open ? 'translateX(20px)' : 'translateX(0)'};
+    }
+
+    :nth-child(3) {
+      transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
+    }
+  }
 `
 const NavList = styled.ul`
     display: flex;
@@ -102,11 +152,15 @@ const Heading = styled.h1`
 `
 const HeaderElement = styled.header`
     width: 100vw;
+    @media(max-width: 614px){
+        height: 2.5rem;
+    }
     padding:0px;
     margin: 0px
     z-index: 100;
     position: fixed;
     top: 0px
+    background: black;
 `
 const Paragraph = styled.p`
     font-family: Helvetica;
@@ -115,6 +169,7 @@ const Paragraph = styled.p`
     width: 80%;
     padding: 0px 0px 10px 0px;
 `
+
 const SubHeading = styled.h2`
    
         position: ${props=>props.position};
@@ -143,7 +198,6 @@ const Caption = styled.figcaption`
     text-align: center;
 `
 const Figure = styled.figure`
-    
     text-align: center;
 
 
@@ -160,4 +214,4 @@ const Me = styled.img`
     }
      
 `
-export {Me,Wrapper,Heading, Nav, NavList, ListElement,HeaderElement,SubHeading,Paragraph,Canvas,Frame,ComponentWrapper,Anchor,Image,Figure,Caption,Container }
+export {Me,Wrapper,Heading, Nav, NavList, ListElement,HeaderElement,SubHeading,Paragraph,Canvas,Frame,ComponentWrapper,Anchor,Image,Figure,Caption,Container,BurgerButton }
