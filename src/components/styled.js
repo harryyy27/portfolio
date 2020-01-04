@@ -5,12 +5,13 @@ const Wrapper = styled.main`
     
     
     @media(max-width: 614px){
-        transform: ${({ open }) => open ? 'translateY(100px)' : 'translateY(40px)'};
+        transition: all 0.5s linear;
+        transform: ${({ open }) => open ? 'translateY(140px)' : 'translateY(40px)'};
         width:100vw;
     }
     
     @media(min-width:615px){
-        top: 20vh;
+        top: 100px;
         width: 70vw;
         margin: auto;
     }
@@ -22,9 +23,7 @@ const Anchor = styled.a`
     text-decoration: none;
     font-size: 16px;
     color: red;
-    &:hover {
-        font-size: 18px;
-    };
+    
     &:visted {
         color: red;
     }
@@ -40,26 +39,36 @@ const ComponentWrapper = styled.div`
     width: 100%;
 `
 const Nav = styled.nav`
+    z-index:50;
     position: relative;
     top:0px;
     background: black;
-    height: 20vh;
+    height: 100px;
     @media(max-width: 614px){
         position: fixed;
-        transform: ${({ open }) => open ? 'translateY(0)' : 'translateY(-100%)'};
-        height: 100px;
+        transition: all 0.5s linear;
+        opacity: ${({ open }) => open ? '1' : '0'};
+        transform: ${({ open }) => open ? 'translateY(0px)' : 'translateY(-100px)'};
         position: absolute;
+        top:2.5rem;
         width:100vw;
     }
     
+`
+const BurgerBuns=styled.div`
+    position: absolute;
+    right: 1rem;
+    z-index: 50;
+    height: 2.5rem;
+    width: 2rem;
+    vertical-align: middle;
 `
 const BurgerButton= styled.button`
   @media(min-width: 615px){
       display: none;
   }
   position: absolute;
-  top: 5%;
-  right: 1rem;
+  top: 0.25rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -69,8 +78,10 @@ const BurgerButton= styled.button`
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 10;
+  z-index: 200;
+  transition: all 0.5s linear;
 
+  transform: ${({ open }) => open ? 'rotate(-180deg)' : 'rotate(0)'};
   &:focus {
     outline: none;
   }
@@ -80,10 +91,11 @@ const BurgerButton= styled.button`
     height: 0.25rem;
     background: white;
     border-radius: 10px;
-    transition: all 0.3s linear;
+    transition: all 0.5s linear;
+    
+
     position: relative;
     transform-origin: 1px;
-
     :first-child {
       transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
     }
@@ -99,6 +111,7 @@ const BurgerButton= styled.button`
   }
 `
 const NavList = styled.ul`
+
     display: flex;
     justify-content: space-evenly;
     margin:0px;
@@ -118,22 +131,25 @@ const NavList = styled.ul`
     transform: translate(-50%, -50%);
 `
 const ListElement = styled.li`
-@media(max-width: 614px){
-    width: 100vw;
-    text-align: center;
-}
     list-style-type: none;
     font-family: Helvetica;
     padding: 0px 12px;
     font-size: 16px;
     color: white;
+    @media(max-width: 614px){
+        width: 100vw;
+        text-align: center;
+        padding:0px;
+    }
 `
 const Canvas = styled.canvas`
 
 `
+
 const Heading = styled.h1`
     width:50vw;
     margin: auto;
+    font-family: Helvetica, Arial, sans-serif;
     
   
    
@@ -163,7 +179,7 @@ const HeaderElement = styled.header`
     background: black;
 `
 const Paragraph = styled.p`
-    font-family: Helvetica;
+    font-family: Courier,Georgia, serif;
     font-size: ${props=>props.size!==null}
     margin: auto;
     width: 80%;
@@ -177,16 +193,31 @@ const SubHeading = styled.h2`
         left: ${props=>props.x}vw;
         font-size: ${props=>props.size}px;
         color: ${props=>props.color};
-    
+        font-family: Helvetica,Arial,sans-serif;
     @media(max-width:614){
         font-size: ${props=>props.size/2}px;
 
     }
 `
-const Frame = styled.iframe`
 
+const Title = styled.h1`
+    font-size: 30px;
+    font-family: Helvetica,Arial,sans-serif;
+    border: 1px solid black;
+    text-align: center;
+    @media(min-width: 615px){
+        font-size: 40px;
+    }
+
+`
+
+const SubTitle = styled.h2`
+
+`
+const Frame = styled.iframe`
     width: 300px;
-    padding: 5%;
+    padding: 20px;
+    overflow-x: hidden;
     height: 300px;
 
 `
@@ -214,4 +245,4 @@ const Me = styled.img`
     }
      
 `
-export {Me,Wrapper,Heading, Nav, NavList, ListElement,HeaderElement,SubHeading,Paragraph,Canvas,Frame,ComponentWrapper,Anchor,Image,Figure,Caption,Container,BurgerButton }
+export {Title,SubTitle,Wrapper,Heading, Nav, NavList, ListElement,HeaderElement,SubHeading,Paragraph,Canvas,Frame,ComponentWrapper,Anchor,Image,Figure,Caption,Container,BurgerButton,BurgerBuns}

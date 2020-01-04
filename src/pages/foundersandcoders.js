@@ -12,30 +12,30 @@ const Foundersandcoders=(props)=>{
             </Paragraph>
             <br/>
             <Paragraph>
-                Below you can find some of the projects to which I contributed:
+                Below you can find some of the projects towards which I contributed:
             </Paragraph>
             <ComponentWrapper flex={'flex'}>
             <Figure>
-            <Frame src="https://secret-refuge-10251.herokuapp.com/" frameBorder="0"/>
+                <Frame src="https://secret-refuge-10251.herokuapp.com/" frameBorder="0"/>
 
-            <Caption><Anchor href="https://secret-refuge-10251.herokuapp.com/">
-                    <strong>Brickworks</strong>
-                </Anchor></Caption>
-                </Figure>
-                <Figure>
+                <Caption><i>Click <Anchor href="https://secret-refuge-10251.herokuapp.com/">
+                    <strong>here</strong> 
+                </Anchor> to see the Brickworks Tollington project.</i></Caption>
+            </Figure>
+            <Figure>
                 <Frame src="https://vent-bot.herokuapp.com" frameBorder="0"/>
-                <Anchor href="https://vent-bot.herokuapp.com">
-                    <strong>Ventbot</strong>
-                </Anchor>
-                </Figure>
-            </ComponentWrapper>
-            <ComponentWrapper space={'justify'}>
-                
-                
-            
+                <Caption><i>
+                    Click 
+                    <Anchor href="https://vent-bot.herokuapp.com">
+                        <strong> here </strong>
+                    </Anchor>
+                    to speak to Ventbot.
+                    </i>
+                </Caption>  
+            </Figure>
             </ComponentWrapper>
             <br/>
-                <Paragraph>
+                <Paragraph style={{"text-align":"center"}}>
                     More projects can be found on my <Anchor href="https://github.com/harryyy27"><strong>Github</strong></Anchor>
                 </Paragraph>
             

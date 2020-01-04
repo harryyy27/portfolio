@@ -13,18 +13,18 @@ const DeepLearning =(props)=>{
                 
                 <SubHeading>What's next?</SubHeading>
                 <Paragraph>
-                The next step is gaining a low level understanding by studying <strong style={{color:"red"}}>inear algebra</strong>l (for which I am also book ready!). I have also nearly finished my first <strong style={{color:"red"}}>Kaggle</strong> project! Stay tuned!!! The ultimate aim really is to get to such a level where research journals/papers are readable to me.</Paragraph>
+                The next step is gaining a low level understanding by studying <strong style={{color:"red"}}>linear algebra</strong> (for which I am also book ready!). I have also nearly finished my first <strong style={{color:"red"}}>Kaggle</strong> project! Stay tuned!!! The ultimate aim really is to get to such a level where research journals/papers are readable to me and I can improvise at a low level with some of my own ideas.</Paragraph>
 
                 <SubHeading>A few examples</SubHeading>
                 <Paragraph>Until I figure out the best way to share my work, I am unfortunately limited to sharing only the results with you. Below is an image I created through <strong style={{color:"red"}}>Neural Style Transfer</strong>. This technique involves taking the top layers of a network that has studying the stroke patterns from the Van Goth painting starry night and a picture of a friend of mine.</Paragraph>
                 <ComponentWrapper space="justify">
                     <Figure>
                         <Image src={starry_night} alt="starry night"/>
-                        <Caption>Starry night</Caption>
+                        <Caption><i>Starry night</i></Caption>
                     </Figure>
                     <Figure>
                         <Image src={nader} alt="nader"/>
-                        <Caption>My buddy</Caption>
+                        <Caption><i>My buddy</i></Caption>
                     </Figure>
                 </ComponentWrapper>
                 <Paragraph>
@@ -32,14 +32,14 @@ const DeepLearning =(props)=>{
                 </Paragraph>
                 <Figure>
                         <Image src={starry_day} alt="starry day"/>
-                        <Caption>Starry day</Caption>
+                        <Caption><i>Starry day</i></Caption>
                     </Figure>
                 <Paragraph>
                     Another labrat :)
                 </Paragraph>
                 <Figure>
                         <Image src={jacob} alt="jacob"/>
-                        <Caption>Jacob</Caption>
+                        <Caption><i>Jacob</i></Caption>
                     </Figure>
                 
                 <Paragraph>

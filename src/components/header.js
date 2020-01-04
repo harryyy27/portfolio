@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import Burger from '../pages/img/burger.png';
-import {HeaderElement, Nav,NavList,ListElement, BurgerButton} from '../components/styled'
+import {HeaderElement, Nav,NavList,ListElement, BurgerButton, BurgerBuns} from '../components/styled'
 import {NavLink} from 'react-router-dom'
 const Header =(props)=>{
     
@@ -60,11 +59,14 @@ const Header =(props)=>{
                         </ListElement> */}
                     </NavList>
                 </Nav>
-                <BurgerButton open={props.burgerOpen}onClick={props.burgerHandle}>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                </BurgerButton>
+                <BurgerBuns>
+                    <BurgerButton open={props.burgerOpen}onClick={props.burgerHandle}>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                    </BurgerButton>
+                </BurgerBuns>
+                
             </HeaderElement>
         )
     
