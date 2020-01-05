@@ -6,13 +6,11 @@ const Wrapper = styled.main`
     
     @media(max-width: 614px){
         transition: all 0.5s linear;
-        transform: ${({ open }) => open ? 'translateY(140px)' : 'translateY(40px)'};
+        transform: ${({ open }) => open ? 'translateY(100px)' : 'translateY(0)'};
         width:100vw;
     }
     
     @media(min-width:615px){
-        top: 100px;
-        width: 70vw;
         margin: auto;
     }
 
@@ -45,7 +43,6 @@ const Nav = styled.nav`
     background: black;
     height: 100px;
     @media(max-width: 614px){
-        position: fixed;
         transition: all 0.5s linear;
         opacity: ${({ open }) => open ? '1' : '0'};
         transform: ${({ open }) => open ? 'translateY(0px)' : 'translateY(-100px)'};
@@ -114,7 +111,7 @@ const NavList = styled.ul`
 
     display: flex;
     justify-content: space-evenly;
-    margin:0px;
+    margin: 0px;
     padding: 0px;
     width:100vw;
     @media(max-width: 614px){
@@ -139,7 +136,7 @@ const ListElement = styled.li`
     @media(max-width: 614px){
         width: 100vw;
         text-align: center;
-        padding:0px;
+        padding: 0px;
     }
 `
 const Canvas = styled.canvas`
@@ -161,7 +158,7 @@ const Heading = styled.h1`
         top: ${props=>props.y?props.y+'vh':null};
         left: ${props=>props.x?props.x+'vw': null};
         text-align:center;
-        padding:10px 0px 10px 0px
+        padding: 10px 0px 10px 0px
     }
     
 
@@ -171,10 +168,9 @@ const HeaderElement = styled.header`
     @media(max-width: 614px){
         height: 2.5rem;
     }
-    padding:0px;
+    padding: 0px;
     margin: 0px
     z-index: 100;
-    position: fixed;
     top: 0px
     background: black;
 `
@@ -203,7 +199,7 @@ const SubHeading = styled.h2`
 const Title = styled.h1`
     font-size: 30px;
     font-family: Helvetica,Arial,sans-serif;
-    border: 1px solid black;
+    color: white;
     text-align: center;
     @media(min-width: 615px){
         font-size: 40px;
@@ -218,7 +214,7 @@ const Frame = styled.iframe`
     width: 300px;
     padding: 20px;
     overflow-x: hidden;
-    height: 300px;
+    height: 400px;
 
 `
 const Image = styled.img`

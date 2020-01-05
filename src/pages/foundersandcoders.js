@@ -34,7 +34,7 @@ const Foundersandcoders=(props)=>{
                 </Caption>  
             </Figure>
             </ComponentWrapper>
-            <br/>
+            {/* <br/> */}
                 <Paragraph style={{"text-align":"center"}}>
                     More projects can be found on my <Anchor href="https://github.com/harryyy27"><strong>Github</strong></Anchor>
                 </Paragraph>
