@@ -44,7 +44,7 @@ const Home = (props) => {
                 <Title>I</Title>
                 <Title>AM </Title>
                 <Title>HARRY</Title>
-                <p className='desc'>I was having kittens trying to think about what to do with this home page...</p>
+                <p className='desc'>I was having kittens thinking about what to do with this home page...</p>
                 <div className='cat' />
             </div>
         </Wrapper>
