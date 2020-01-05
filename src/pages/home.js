@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Wrapper,Title } from '../components/styled';
+import  Computer  from './img/motherboard-small.jpg'
 import '../App.css';
 
 const Home = (props) => {
@@ -38,7 +39,7 @@ const Home = (props) => {
         }
     })
     return (
-        <Wrapper blackwrap={true} open={props.burgerOpen} className='wrapper'>
+        <Wrapper blackwrap={true} open={props.burgerOpen} style={{background: `url(${Computer})`,backgroundColor: 'rgba(0,0,0,0.6)',backgroundSize:'cover'}}className='wrapper'>
             <div className='header-text-wrapper'>
                 <Title>HELLO</Title>
                 <Title>I</Title>

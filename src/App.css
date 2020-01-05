@@ -2,8 +2,8 @@
     min-height: calc(100vh - 100px);
     display: flex;
     align-items: center;
-    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('./assets/motherboard-small.jpg');
-    background-size: cover;
+    /* background:  url('./pages/img/motherboard-small.jpg'); */
+    /* background-size: cover; */
 }
 
 .header-text-wrapper {
@@ -14,7 +14,7 @@
     height: 300px;
     width: 300px;
     margin: auto;
-    background-image: url('./assets/cat-programmer.gif');
+    background-image: url('./pages/img/cat-programmer.gif');
     background-size: cover;
 }
 
