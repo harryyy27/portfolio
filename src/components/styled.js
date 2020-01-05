@@ -8,10 +8,12 @@ const Wrapper = styled.main`
         transition: all 0.5s linear;
         transform: ${({ open }) => open ? 'translateY(100px)' : 'translateY(0)'};
         width:100vw;
+        top: 2.5rem;
+
     }
-    
     @media(min-width:615px){
         margin: auto;
+        top: 100px;
     }
 
     background: ${props=>localStorage.getItem("page")==='Home'||localStorage.getItem("page")===null?'white':props.color};
@@ -165,6 +167,7 @@ const Heading = styled.h1`
 `
 const HeaderElement = styled.header`
     width: 100vw;
+    position: fixed;
     @media(max-width: 614px){
         height: 2.5rem;
     }
