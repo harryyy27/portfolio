@@ -2,8 +2,7 @@
     min-height: calc(100vh - 100px);
     display: flex;
     align-items: center;
-    /* background:  url('./pages/img/motherboard-small.jpg'); */
-    /* background-size: cover; */
+    /* background-color:  */
 }
 
 .header-text-wrapper {
