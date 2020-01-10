@@ -15,8 +15,9 @@ const Me=(props)=>{
             </Paragraph>
             <br/>
             <Paragraph >
-                When I'm not pushing keys, I can often be found somewhere within a 5 mile radius of my house reading a book or spending my money like I don't have rent to pay.
+                When I'm not pushing keys, I can often be found somewhere within a 5 mile radius of my house indulging in one of the many hobbies I've accumulated over the years including but not limited to, nomadic reading, Krav Maga & chess.
             </Paragraph>
+            <br/>
         </Wrapper>
     )
 }
