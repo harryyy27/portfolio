@@ -2,8 +2,7 @@ import React, {Component, useState, useEffect}from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import Header from './components/header'
 import Home from './pages/home'
-import { createBrowserHistory as createHistory } from 'history'
-const history: History = createHistory()
+import history from 'history'
 
 
 export default function App() {
