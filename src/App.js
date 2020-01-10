@@ -1,8 +1,8 @@
 import React, {Component, useState, useEffect}from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom'
+import {HashRouter as Router, Route} from 'react-router-dom'
 import Header from './components/header'
 import Home from './pages/home'
-import history from 'history'
+// import history from 'history'
 
 
 export default function App() {
@@ -69,7 +69,7 @@ export default function App() {
       var {Deeplearning,Russellandbromley,Foundersandcoders,Canvas,Me,Contact} = page;
     }
     return (
-        <Router history={history}>
+        <Router>
           <Header handleImport={handleImport}page={page} burgerOpen={burgerOpen} burgerHandle={burgerHandle}/>
           <Route path='/' exact strict render={()=><Home burgerOpen={burgerOpen}/>}/>
 
