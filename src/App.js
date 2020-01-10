@@ -2,13 +2,14 @@ import React, {Component, useState, useEffect}from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import Header from './components/header'
 import Home from './pages/home'
-import {Container} from './components/styled'
+import { createBrowserHistory as createHistory } from 'history'
+const history: History = createHistory()
 
 
 export default function App() {
   function useLocalState() {
     let local = localStorage.getItem('page')
-   
+   console.log(local)
     const [loc,setState]=useState(local)
   function setLoc(newItem,comp){
 
@@ -69,7 +70,7 @@ export default function App() {
       var {Deeplearning,Russellandbromley,Foundersandcoders,Canvas,Me,Contact} = page;
     }
     return (
-        <Router>
+        <Router history={history}>
           <Header handleImport={handleImport}page={page} burgerOpen={burgerOpen} burgerHandle={burgerHandle}/>
           <Route path='/' exact strict render={()=><Home burgerOpen={burgerOpen}/>}/>
 
